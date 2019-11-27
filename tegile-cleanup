@@ -1,0 +1,2 @@
+#tegile intelliflash cleanup script
+/var/support/bin/zebisystem-cleanup.sh
