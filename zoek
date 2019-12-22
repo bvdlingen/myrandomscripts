@@ -5,10 +5,10 @@
 # basic script to search for native, flatpak and snap packages with one command
 # run this script with the search string as argurment
 
-# Currently only works with my personal favorite linux distros: solus, debian and debian derivates
+# Currently only works with my personal favorite linux distros
 
 # e.g.:
-# zoek goodies
+# ./zoek goodies
 
 
 STRING1=$1
@@ -16,16 +16,13 @@ STRING1=$1
 declare -A osInfo;
 osInfo[/usr/bin/eopkg]=eopkg
 osInfo[/usr/bin/apt-cache]=apt-cache
-# osInfo[/usr/bin/yum]=yum # testing
-
 
 for f in ${!osInfo[@]}
 do
     if [[ -f $f ]];then
-        echo Package manager: ${osInfo[$f]}
+        echo Package manager: ${osInfo[$f]} | lolcat
 
-echo .
-echo searching for native packages... | lolcat
+echo Searching for native packages... | lolcat
 $f search $STRING1
 
 echo .
