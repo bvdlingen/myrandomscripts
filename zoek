@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-<< 'MULTILINE-COMMENT'
+<< 'multilinecomment'
     
     zoek?
     Dutch, weak verb, present tense
@@ -16,7 +16,7 @@
     e.g.:
     zoek goodies
     
-MULTILINE-COMMENT
+multilinecomment
 
 
 
