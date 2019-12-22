@@ -17,7 +17,11 @@
     zoek packagename
     
     screenshot
-    https://i.imgur.com/sBhdj7V.png
+    https://i.imgur.com/Zy8mW0N.png
+    
+    instructions
+    Save this file as /usr/bin/zoek
+    Set execute permissions: chmod +x /usr/bin/zoek
     
 multilinecomment
 
