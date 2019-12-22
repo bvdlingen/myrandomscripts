@@ -17,7 +17,7 @@
     zoek packagename
     
     screenshot
-    https://i.imgur.com/Zy8mW0N.png
+    https://i.imgur.com/iEAYVRf.png
     
     instructions
     Save this file as /usr/bin/zoek
@@ -37,7 +37,7 @@ osInfo[/usr/bin/apt-cache]=apt-cache
 for f in ${!osInfo[@]}
 do
     if [[ -f $f ]];then
-        echo Package manager: ${osInfo[$f]} | lolcat
+        echo Package manager: ${osInfo[$f]} on $PRETTY_NAME | lolcat
 
 echo Searching for native packages... | lolcat
 $f search $STRING1
