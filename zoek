@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-
-
 << 'multilinecomment'
     
     zoek?
@@ -28,6 +26,7 @@ multilinecomment
 
 
 STRING1=$1
+source /etc/os-release
 
 declare -A osInfo;
 osInfo[/usr/bin/eopkg]=eopkg
