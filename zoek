@@ -25,11 +25,11 @@ multilinecomment
 
 STRING1=$1
 source /etc/os-release
-
 declare -A osInfo;
 osInfo[/usr/bin/eopkg]=eopkg
 osInfo[/usr/bin/apt-cache]=apt-cache
 osInfo[/usr/bin/yum]=redhat #testing: tested on centos
+osInfo[/usr/bin/pacman]=arch
 
 for f in ${!osInfo[@]}
 do
@@ -38,6 +38,8 @@ do
 
 echo Searching for native packages... | lolcat
 $f search $STRING1
+#dirtyhackforarch, arch users are used to it anyway
+test -f /usr/bin/yum && $f -Ss $STRING1
 
 echo .
 echo looking for snap packages... | lolcat
