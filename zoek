@@ -1,14 +1,23 @@
 #!/usr/bin/env bash
 
-# zoek?
 
-# basic script to search for native, flatpak and snap packages with one command
-# run this script with the search string as argurment
+<< 'MULTILINE-COMMENT'
+    
+    zoek?
+    Dutch, weak verb, present tense
+    to search, look for, to seek
+    
+    A basic script to search for native, flatpak and snap packages with one command
+    run this script with the search string as argurment
 
-# Currently only works with my personal favorite linux distros
+    Currently only works with my personal favorite linux distros, Solus, Debian and Debian derivates.
+    Testing Redhat, Fedora and CentOS support
 
-# e.g.:
-# ./zoek goodies
+    e.g.:
+    zoek goodies
+    
+MULTILINE-COMMENT
+
 
 
 STRING1=$1
@@ -16,6 +25,7 @@ STRING1=$1
 declare -A osInfo;
 osInfo[/usr/bin/eopkg]=eopkg
 osInfo[/usr/bin/apt-cache]=apt-cache
+# osInfo[/usr/bin/yum]=redhat # testing
 
 for f in ${!osInfo[@]}
 do
