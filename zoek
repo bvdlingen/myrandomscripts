@@ -29,7 +29,7 @@ source /etc/os-release
 declare -A osInfo;
 osInfo[/usr/bin/eopkg]=eopkg
 osInfo[/usr/bin/apt-cache]=apt-cache
-# osInfo[/usr/bin/yum]=redhat # testing
+osInfo[/usr/bin/yum]=redhat #testing: tested on centos
 
 for f in ${!osInfo[@]}
 do
