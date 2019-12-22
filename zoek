@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 << 'multilinecomment'
-    
+
     zoek?
     Dutch, weak verb, present tense
     to search, look for, to seek
@@ -9,8 +9,7 @@
     run this script with the search string as argurment
 
     example:
-    zoek packagename
-    
+    zoek packagename    
     screenshot:
     https://i.imgur.com/s5gFSzP.png
     
@@ -20,7 +19,6 @@
     
     Currently only works with my personal favorite linux distributions: Solus, Debian and Debian derivates.
     Testing Redhat, Fedora and CentOS support
-    
 multilinecomment
 
 STRING1=$1
@@ -30,7 +28,7 @@ osInfo[/usr/bin/eopkg]=eopkg
 osInfo[/usr/bin/apt-cache]=apt-cache
 osInfo[/usr/bin/yum]=redhat #testing: tested on centos
 osInfo[/usr/bin/pacman]=arch
-
+echo 
 for f in ${!osInfo[@]}
 do
     if [[ -f $f ]];then
@@ -40,14 +38,15 @@ echo Searching for native packages... | lolcat
 $f search $STRING1
 #dirtyhackforarch, arch users are used to it anyway
 test -f /usr/bin/yum && $f -Ss $STRING1
+echo 
 
-echo .
 echo looking for snap packages... | lolcat
 snap search $STRING1
+echo 
 
-echo .
 echo flatpak maybe? | lolcat
 flatpak search $STRING1
 
     fi
 done
+echo 
