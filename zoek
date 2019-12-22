@@ -5,25 +5,23 @@
     Dutch, weak verb, present tense
     to search, look for, to seek
     
-    A basic script to search for native, flatpak and snap packages with one command
+    Search for native, flatpak and snap packages with one command
     run this script with the search string as argurment
 
-    Currently only works with my personal favorite linux distros, Solus, Debian and Debian derivates.
-    Testing Redhat, Fedora and CentOS support
-
-    e.g.:
+    example:
     zoek packagename
     
-    screenshot
+    screenshot:
     https://i.imgur.com/iEAYVRf.png
     
-    instructions
+    instructions:
     Save this file as /usr/bin/zoek
     Set execute permissions: chmod +x /usr/bin/zoek
     
+    Currently only works with my personal favorite linux distributions: Solus, Debian and Debian derivates.
+    Testing Redhat, Fedora and CentOS support
+    
 multilinecomment
-
-
 
 STRING1=$1
 source /etc/os-release
