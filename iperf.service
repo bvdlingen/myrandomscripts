@@ -1,5 +1,8 @@
 
-# /etc/systemd/system/iperf.service
+# save this file as /etc/systemd/system/iperf.service
+# then execute the following command:  
+# sudo systemctl enable iperf.service && sudo ufw allow 5201/udp && sudo ufw allow 5201/tcp && sudo systemctl iperf.service
+
 [Unit]
 Description=iperf server
 After=syslog.target network.target auditd.service
