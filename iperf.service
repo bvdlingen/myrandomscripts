@@ -1,4 +1,4 @@
-
+# install iperf3
 # save this file as /etc/systemd/system/iperf.service
 # then execute the following command:  
 # sudo systemctl enable iperf.service && sudo ufw allow 5201/udp && sudo ufw allow 5201/tcp && sudo systemctl iperf.service
