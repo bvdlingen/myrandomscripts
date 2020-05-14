@@ -1,0 +1,8 @@
+[Unit]
+Description=Borg backup service
+
+[Service]
+ExecStart=/usr/bin/borgbackupscript.sh
+
+[Install]
+WantedBy=multi-user.target
