@@ -1,0 +1,9 @@
+[Unit]
+Description=Run borgbackupscript service on boot and every four hours.
+
+[Timer]
+OnBootSec=0min
+OnUnitActiveSec=4h
+
+[Install]
+WantedBy=timers.target
