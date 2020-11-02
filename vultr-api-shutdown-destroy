@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+# api key XXXH2WYWCAHOBDNX4TGK4H2QH3CNSJYCRXXX
+
+curl -s -H 'API-Key:XXXH2WYWCAHOBDNX4TGK4H2QH3CNSJYCRXXX' https://api.vultr.com/v1/server/list | sed -n 's|.*"SUBID":"\([^"]*\)".*|\1|p' > subid
+
+subid="$(cat /root/subid)"
+echo $subid
+
+curl -H 'API-Key:XXXH2WYWCAHOBDNX4TGK4H2QH3CNSJYCRXXX' https://api.vultr.com/v1/server/halt --data 'SUBID='$subid''
+curl -H 'API-Key:XXXH2WYWCAHOBDNX4TGK4H2QH3CNSJYCRXXX' https://api.vultr.com/v1/server/destroy --data 'SUBID='$subid''
